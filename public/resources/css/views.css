@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --rd-primary-color: #3a86ff;
+  --rd-secondary-color: #ff006e;
+  --rd-background-color: #1a2332;
+  --rd-card-background: #2a3447;
+  --rd-text-color: #ffffff;
+  --rd-text-muted: #a0aec0;
+  --rd-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.rd-unique-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--rd-text-color);
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background-color: var(--rd-background-color);
+}
+
+.rd-unique-room-details-title {
+  font-size: 2.5rem;
+  color: var(--rd-text-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.rd-unique-room-card {
+  background-color: var(--rd-card-background);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid var(--rd-border-color);
+}
+
+.rd-unique-room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.rd-unique-room-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.rd-unique-info-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.rd-unique-info-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.rd-unique-info-item strong {
+  display: block;
+  color: var(--rd-text-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.rd-unique-info-item span {
+  color: var(--rd-text-muted);
+  font-size: 0.95rem;
+}
+
+.rd-unique-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rd-unique-available {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.rd-unique-unavailable {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.rd-unique-images-title {
+  font-size: 2rem;
+  color: var(--rd-text-color);
+  margin: 3rem 0 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.rd-unique-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.rd-unique-image-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid var(--rd-border-color);
+  background-color: var(--rd-card-background);
+  position: relative;
+}
+
+.rd-unique-image-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.rd-unique-room-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.rd-unique-image-card:hover .rd-unique-room-image {
+  filter: brightness(1.1);
+}
+
+.rd-unique-back-button-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.rd-unique-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid var(--rd-border-color);
+  cursor: pointer;
+}
+
+.rd-unique-btn-secondary {
+  background-color: var(--rd-primary-color);
+  color: #fff;
+}
+
+.rd-unique-btn-secondary:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+}
+
+.rd-unique-chevron-left {
+  margin-right: 0.5rem;
+}
+
+.rd-unique-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.rd-unique-modal.show {
+  opacity: 1;
+}
+
+.rd-unique-modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.rd-unique-modal.show .rd-unique-modal-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#rd-unique-modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.rd-unique-close-button {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  transition: color 0.3s ease;
+}
+
+.rd-unique-close-button:hover {
+  color: var(--rd-secondary-color);
+}
+
+.rd-unique-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+  transition: all 0.3s ease;
+  z-index: 10000;
+  border-radius: 50%;
+}
+
+.rd-unique-nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.rd-unique-prev {
+  left: 20px;
+}
+
+.rd-unique-next {
+  right: 20px;
+}
+
+.rd-unique-fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.rd-unique-fade-in-section.rd-appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .rd-unique-container {
+    padding: 1rem;
+  }
+
+  .rd-unique-room-details-title {
+    font-size: 2rem;
+  }
+
+  .rd-unique-images-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .rd-unique-room-image {
+    height: 200px;
+  }
+
+  .rd-unique-room-card {
+    padding: 1.5rem;
+  }
+
+  .rd-unique-room-info {
+    grid-template-columns: 1fr;
+  }
+
+  .rd-unique-nav-button {
+    padding: 12px;
+    font-size: 20px;
+  }
+
+  .rd-unique-prev {
+    left: 10px;
+  }
+
+  .rd-unique-next {
+    right: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .rd-unique-images-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rd-unique-animate-fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}

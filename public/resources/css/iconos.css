@@ -1,0 +1,84 @@
+/* Estilos para los iconos en el título */
+.clientes-title svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary);
+  }
+  
+  /* Estilos para los iconos en las estadísticas */
+  .stat-card svg {
+    width: 20px;
+    height: 20px;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Estilos para el icono de búsqueda */
+  .search-container {
+    position: relative;
+  }
+  
+  .search-container svg {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--gray-400);
+    pointer-events: none;
+  }
+  
+  /* Estilos para los iconos en el botón principal */
+  .clientes-btn-primary svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  .clientes-btn-primary:hover svg {
+    transform: rotate(90deg);
+  }
+  
+  /* Estilos para los iconos en los badges de estado */
+  .estado-badge svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+  
+  /* Estilos para los iconos en los botones de acción */
+  .btn-action svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+  }
+  
+  .btn-action:hover svg {
+    transform: scale(1.1);
+  }
+  
+  /* Ajustes para modo oscuro */
+  @media (prefers-color-scheme: dark) {
+    .search-container svg {
+      color: var(--gray-500);
+    }
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .clientes-title svg {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .stat-card svg {
+      width: 18px;
+      height: 18px;
+    }
+  
+    .btn-action svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
