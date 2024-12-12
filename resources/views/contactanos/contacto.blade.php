@@ -29,20 +29,27 @@
             </div>
         </div>
         <div class="col-lg-7 offset-lg-1">
-            <form action="#" class="contact-form">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <input type="text" placeholder="Tu Nombre">
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="text" placeholder="Tu Correo">
-                    </div>
-                    <div class="col-lg-12">
-                        <textarea placeholder="Dejanos Un Mensaje"></textarea>
-                        <button type="submit">Enviar</button>
-                    </div>
+            <form action="{{ route('reseñas.store') }}" method="POST" class="contact-form">
+            @csrf
+            <div class="row">
+                <div class="col-lg-6">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
                 </div>
-            </form>
+                <div class="col-lg-6">
+                    <input type="email" name="email" placeholder="Tu Correo" required>
+                </div>
+                <div class="col-lg-12">
+                    <textarea name="reseña" placeholder="Déjanos un mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </div>
+            </div>
+
+            @if (session('success'))
+                <p style="color: green; font-weight: bold; margin-top: 10px;">
+                    {{ session('success') }}
+                </p>
+            @endif
+        </form>
         </div>
     </div>
 </div>
