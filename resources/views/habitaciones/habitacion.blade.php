@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6">
-                <div class="room-item" data-room="Habitaciones Grupales" data-price="50" data-capacity="5">
+                <div class="room-item" data-room="Habitaciones Grupales" data-price="50" data-floor="3º" data-capacity="5">
                     <img src="{{ asset('img/room/room-1.jpg') }}" alt="Habitaciones Grupales">
                     <div class="ri-text">
                         <h4>Habitaciones Grupales</h4>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="room-item" data-room="Habitaciones Simples" data-price="100" data-capacity="5">
+                <div class="room-item" data-room="Habitaciones Simples" data-price="100" data-floor="3º" data-capacity="5">
                     <img src="{{ asset('img/room/room-2.jpg') }}" alt="Habitaciones Simples">
                     <div class="ri-text">
                         <h4>Habitaciones Simples</h4>
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="room-item" data-room="Habitaciones Dobles" data-price="150" data-capacity="2">
+                <div class="room-item" data-room="Habitaciones Dobles" data-price="150" data-floor="3º" data-capacity="2">
                     <img src="{{ asset('img/room/room-3.jpg') }}" alt="Habitaciones Dobles">
                     <div class="ri-text">
                         <h4>Habitaciones Dobles</h4>
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="room-item" data-room="Suit Matrimonial" data-price="200" data-capacity="2">
+                <div class="room-item" data-room="Suit Matrimonial" data-price="200" data-floor="3º" data-capacity="2">
                     <img src="{{ asset('img/room/room-4.jpg') }}" alt="Suit Matrimonial">
                     <div class="ri-text">
                         <h4>Suit Matrimonial</h4>
