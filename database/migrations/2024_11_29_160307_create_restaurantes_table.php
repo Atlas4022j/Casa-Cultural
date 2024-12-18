@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('restaurantes', function (Blueprint $table) {
             $table->id();
-            $table->string('imagen')->nullable(); // Campo para la imagen
             $table->string('categoria');
             $table->string('nombre');
             $table->text('descripcion');

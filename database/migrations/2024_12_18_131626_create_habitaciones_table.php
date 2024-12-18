@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('habitaciones', function (Blueprint $table) {
             $table->id();
-            $table->string('img');
-            $table->enum('tipo_habitacion', ['simples', 'doble', 'matrimonial']);
+            $table->enum('tipo_habitacion', ['simples', 'doble', 'matrimonial', 'grupal']);
             $table->decimal('precio', 10, 2);
+            $table->integer('capacidad_maxima');
             $table->text('descripcion');
-            $table->integer('Numero_habitacion')->unique();
-            $table->enum('estado',['disponible','ocupado','reservado']);
+            $table->integer('numero_habitacion')->unique(); // corregido a lowercase
+            $table->enum('estado', ['disponible', 'ocupado', 'reservado'])->default('disponible');
             $table->timestamps();
         });
     }

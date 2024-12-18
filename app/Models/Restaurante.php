@@ -12,4 +12,10 @@ class Restaurante extends Model
     protected $table = 'restaurantes';
 
     protected $fillable = ['nombre', 'categoria', 'descripcion', 'precio', 'estado'];
+
+    // Relación con las imágenes de las habitaciones
+    public function imagenes()
+    {
+        return $this->hasMany(Imagenes::class, 'id_restaurante');
+    }
 }

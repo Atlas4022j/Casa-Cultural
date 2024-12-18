@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
-            $table->string('dni');
-            $table->string('nombre');
-            $table->string('apellidos');
-            $table->string('telefono');
-            $table->string('email');
-            $table->string('usuario');
-            $table->string('password');
-            $table->enum('estado', ['disponible', 'no disponible'])->default('disponible');
+            $table->string('dni')->nullable();
+            $table->string('nombre')->nullable();
+            $table->string('apellidos')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('email')->nullable();
+            $table->string('usuario')->nullable();
+            $table->string('password')->nullable();
+            $table->enum('estado', ['disponible', 'no disponible'])->default('disponible')->nullable();
             $table->timestamps();
         });
     }

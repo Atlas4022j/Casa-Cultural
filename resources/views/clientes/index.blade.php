@@ -1,6 +1,6 @@
 @extends('layouts.sidebar')
 
-@section('title','Hospedaje | Dashboard')
+@section('titulo','Hospedaje | Dashboard')
 
 @section('contenido')
 
@@ -47,8 +47,9 @@
                     <th scope="col">Nombres</th>
                     <th scope="col">Apellidos</th>
                     <th scope="col">Teléfono</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Estado</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col"> Lugar de Procedencia</th>
+                    <th scope="col">Condicion</th>
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>
@@ -59,38 +60,23 @@
                             <td>{{ $cliente->id }}</td>
                             <td>
                                 <div class="tour-name">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M3 7V5c0-1.1.9-2 2-2h2"/>
-                                        <path d="M17 3h2c1.1 0 2 .9 2 2v2"/>
-                                        <path d="M21 17v2c0 1.1-.9 2-2 2h-2"/>
-                                        <path d="M7 21H5c-1.1 0-2-.9-2-2v-2"/>
-                                        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-                                        <path d="M9 9h.01"/>
-                                        <path d="M15 9h.01"/>
-                                    </svg>
                                     {{ $cliente->dni }}
                                 </div>
                             </td>
                             <td>{{ $cliente->nombre }}</td>
                             <td>{{ $cliente->apellidos }}</td>
                             <td>{{ $cliente->telefono }}</td>
-                            <td>{{ $cliente->email }}</td>
-                            <td>
-                                <span class="status-badge {{ $cliente->estado ? 'status-available' : 'status-unavailable' }}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                                        <path d="M9 12l2 2 4-4"/>
-                                    </svg>
-                                    {{ $cliente->estado ? 'Activo' : 'Inactivo' }}
-                                </span>
-                            </td>
-                            <td>
-                                <button class="tours-btn-view" onclick="viewCliente({{ $cliente->id }})" aria-label="Ver detalles">
+                            <td>{{ $cliente->edad }}</td>
+                            <td>{{ $cliente->procedencia }}</td>
+                            <td>{{ $cliente->condicion }}</td>
+                            
+                            <td style="display: flex;">
+                                <a href="{{ route('clientes.show', $cliente->id) }}" class="tours-btn-view" >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
                                         <circle cx="12" cy="12" r="3"/>
                                     </svg>
-                                </button>
+                                </a>
                                 <a href="{{ route('clientes.edit', $cliente->id) }}" class="tours-btn-edit" aria-label="Editar Cliente">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>

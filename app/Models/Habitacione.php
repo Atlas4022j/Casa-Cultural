@@ -9,14 +9,20 @@ class Habitacione extends Model
 {
     use HasFactory;
 
-    protected $table = 'habitaciones'; // Asegúrate de que el nombre coincide con la tabla
+    protected $table = 'habitaciones';
 
-    // Define los campos que se pueden asignar de forma masiva
-    protected $fillable = ['id', 'tipo_habitacion', 'precio', 'descripcion', 'numero_habitacion', 'estado', 'img']; // Añadí el campo 'img' aquí
+    protected $fillable = [
+        'tipo_habitacion',
+        'precio',
+        'capacidad_maxima',
+        'descripcion',
+        'numero_habitacion',
+        'estado',
+    ];
 
-    // Relación con la tabla imagenes_habitaciones
-    public function imagenes() {
-        return $this->hasMany(Imagenes::class, 'id_habitaciones');
-    
+    // Relación con las imágenes
+    public function imagenes()
+    {
+        return $this->hasMany(Imagenes::class, 'id_habitacion');
     }
 }

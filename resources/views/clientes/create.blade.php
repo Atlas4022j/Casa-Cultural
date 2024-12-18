@@ -1,60 +1,68 @@
 @extends('layouts.sidebar')
 
-@section('title','Dashboard | Clientes')
+@section('titulo','Dashboard | Clientes')
 
 @section('contenido')
-<div class="cu-background"></div>
-    <main class="cu-content">
-        <div class="cu-card">
-            <div class="cu-header">
-                <h2 class="cu-title">Crear Nuevo Usuario</h2>
-                <p class="cu-subtitle">Complete el formulario para registrarse</p>
-            </div>
-            <form id="registrationForm" action="{{ route('clientes.store') }}" method="POST">
-                @csrf
-                <div class="cu-form-grid">
-                    <div class="cu-input-group">
-                        <i class="fas fa-id-card"></i>
-                        <input type="text" id="dni" name="dni" maxlength="8" required>
-                        <label for="dni">DNI</label>
-                    </div>
-                    <div class="cu-input-group">
-                        <i class="fas fa-user"></i>
-                        <input type="text" id="nombre" name="nombre" required>
-                        <label for="nombre">Nombre</label>
-                    </div>
-                    <div class="cu-input-group">
-                        <i class="fas fa-user"></i>
-                        <input type="text" id="apellidos" name="apellidos" required>
-                        <label for="apellidos">Apellidos</label>
-                    </div>
-                    <div class="cu-input-group">
-                        <i class="fas fa-phone"></i>
-                        <input type="tel" id="telefono" name="telefono" required>
-                        <label for="telefono">Teléfono</label>
-                    </div>
-                    <div class="cu-input-group">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Correo Electrónico</label>
-                    </div>
-                    <div class="cu-input-group">
-                        <i class="fas fa-user-circle"></i>
-                        <input type="text" id="usuario" name="usuario" required>
-                        <label for="usuario">Usuario</label>
-                    </div>
+<div class="rr-container">
+    <div class="rr-form-card" style="color: black">
+        <div class="rr-form-header">
+            <h2 class="rr-form-title">Registrar Cliente</h2>
+            <p class="rr-form-subtitle">Complete el formulario para registrar un nuevo cliente</p>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
-                <div class="cu-input-group cu-password-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="password" name="password" required>
-                    <label for="password">Contraseña</label>
-                    <i class="fas fa-eye-slash cu-toggle-password"></i>
-                </div>
-                <button type="submit" class="cu-btn-submit">
-                    <span>Crear Usuario</span>
-                    <i class="fas fa-user-plus"></i>
-                </button>
-            </form>
+            @endif
         </div>
-    </main>
+        <form action="{{ route('clientes.store') }}" method="POST" id="roomRegistrationForm" class="rr-form rr-form-animate-in" enctype="multipart/form-data">
+            @csrf
+            <div class="room-group">
+        
+                <!-- Datos de la habitación -->
+                <div class="rr-form-grid">
+                    <div class="rr-input-group">
+                        <input type="number" name="dni" id="capacidadMaxima" class="form-control"  required>
+                        <label for="">DNI</label>
+                    </div>
+                    <div class="rr-input-group">
+                        <input type="text" name="nombre" id="capacidadMaxima" class="form-control"  required>
+                        <label for="">Nombre</label>
+                    </div>
+                    <div class="rr-input-group">
+                        <input type="text" name="apellidos" id="capacidadMaxima" class="form-control"  required>
+                        <label for="">Apellidos</label>
+                    </div>
+                    <div class="rr-input-group">
+                        <input type="number" name="edad" id="capacidadMaxima" class="form-control"  required>
+                        <label for="">Edad</label>
+                    </div>
+                    <div class="rr-input-group">
+                        <input type="number" name="telefono" id="capacidadMaxima" class="form-control"  required>
+                        <label for="">Telefono</label>
+                    </div>
+                    <div class="rr-input-group">
+                        <input type="text" name="procedencia" id="capacidadMaxima" class="form-control"  required>
+                        <label for="">Lugar De Procedencia</label>
+                    </div>                
+                </div>
+        
+                <!-- Descripción de la habitación -->
+                <div class="rr-input-group rr-textarea-group">
+                    <textarea name="condicion" id="descripcion" rows="3" required></textarea>
+                    <label for="descripcion">Condicion</label>
+                    <i data-lucide="align-left" class="rr-icon"></i>
+                </div>
+            </div>
+        
+            <button type="submit" class="rr-submit-btn">
+                <span>Registrar Cliente</span>
+                <i data-lucide="check-circle" class="rr-icon"></i>
+            </button>
+        </form>   
+    </div>
+</div>
 @endsection

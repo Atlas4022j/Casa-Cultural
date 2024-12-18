@@ -50,6 +50,7 @@
                         <label for="tipoHabitacion">Tipo de Habitación</label>
                         <i data-lucide="bed" class="rr-icon"></i>
                     </div>
+                    
                     <div class="rr-input-group">
                         <input type="number" name="capacidad_maxima" id="capacidadMaxima" class="form-control" min="1" required>
                         <label for="">Capacidad Máxima</label>
@@ -61,15 +62,15 @@
                         <i data-lucide="dollar-sign" class="rr-icon"></i>
                     </div>
                     <div class="rr-input-group">
-                        <input type="number" name="numero_habitacion" id="numeroHabitacion" value="{{ old('numero_habitacion') }}" required>
+                        <input type="number" name="numero_habitacion" id="numeroHabitacion" value="{{ old('Numero_habitacion') }}" required>
                         <label for="numeroHabitacion">Número de Habitación</label>
                         <i data-lucide="door-closed" class="rr-icon"></i>
-                        @error('numero_habitacion')
-                            <div style="background-color: red: color: white">
+                        @error('Numero_habitacion')
+                            <div style="color: red;">
                                 {{ $message }}
                             </div>
                         @enderror
-                    </div>
+                    </div>                    
                 </div>
         
                 <!-- Descripción de la habitación -->
