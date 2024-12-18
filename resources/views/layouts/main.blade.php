@@ -58,6 +58,8 @@
     <script src="{{ asset('resources/js/jquery.slicknav.js') }}"></script>
     <script src="{{ asset('resources/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('resources/js/main.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
+    
 </body>
 
 </html>

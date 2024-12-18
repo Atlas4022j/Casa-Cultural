@@ -59,6 +59,9 @@ Route::middleware([
 
 
 
-route::get('/reserva-habitacion', function () {
-    return view('reservas.index');
-})->name('reserva-habitacion');
+//route::get('/reserva-habitacion', function () {
+//    return view('reservas.index');
+//})->name('reserva-habitacion');
+
+Route::get('/reserva-habitacion', [ReservaController::class, 'reservarHabitacion'])->name('reserva-habitacion');
+Route::post('/procesar-reserva', [ReservaController::class, 'procesarReserva'])->name('procesar-reserva');
