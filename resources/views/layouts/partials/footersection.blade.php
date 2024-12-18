@@ -6,7 +6,7 @@
                 <div class="ft-about">
                     <div class="logo mb-4">
                         <a href="#">
-                            <img src="/footer-logo.png" alt="Hospedaje El Mirador" class="img-fluid" style="max-width: 200px;">
+                            <img src="{{ asset('img/logo/logo_hotel.png') }}" alt="Hospedaje El Mirador" class="img-fluid" style="max-width: 200px;">
                         </a>
                     </div>
                     <p class="mb-4">Hospedaje Casa Cultural El Mirador: un espacio donde la cultura, el confort y la hospitalidad se encuentran en perfecta armonía.</p>
@@ -45,27 +45,27 @@
                     <h6>Enlaces Rápidos</h6>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="/tours" class="text-white text-decoration-none">Dirsetur</a>
+                            <a href="" class="text-white text-decoration-none">Dirsetur</a>
                             <img src="{{ asset('img/enlaces/dircetur.png') }}" alt="Dirsetur" class="hover-image img-fluid" style="width: 200px; height: 150px; object-fit: cover;">
                         </li>
                         <li>
-                            <a href="/rooms" class="text-white text-decoration-none">Ministerio De Cultura</a>
+                            <a href="" class="text-white text-decoration-none">Ministerio De Cultura</a>
                             <img src="{{ asset('img/enlaces/ministerio-cultura.png') }}" alt="Ministerio De Cultura" class="hover-image img-fluid" style="width: 200px; height: 150px; object-fit: cover;">
                         </li>
                         <li>
-                            <a href="/events" class="text-white text-decoration-none">Peru Informa</a>
+                            <a href="" class="text-white text-decoration-none">Peru Informa</a>
                             <img src="{{ asset('img/enlaces/peru-informa.jpg') }}" alt="Peru Informa" class="hover-image img-fluid" style="width: 200px; height: 150px; object-fit: cover;">
                         </li>
                         <li>
-                            <a href="/gallery" class="text-white text-decoration-none">Marca Peru</a>
+                            <a href="" class="text-white text-decoration-none">Marca Peru</a>
                             <img src="{{ asset('img/enlaces/marca.webp') }}" alt="Marca Peru" class="hover-image img-fluid" style="width: 200px; height: 150px; object-fit: cover;">
                         </li>
                         <li>
-                            <a href="/gallery" class="text-white text-decoration-none">Tu Que Planes</a>
+                            <a href="" class="text-white text-decoration-none">Tu Que Planes</a>
                             <img src="{{ asset('img/enlaces/tu-que-planes.png') }}" alt="Tu Que Planes" class="hover-image img-fluid" style="width: 200px; height: 150px; object-fit: cover;">
                         </li>
                         <li>
-                            <a href="/gallery" class="text-white text-decoration-none">Policia De Turismo</a>
+                            <a href="" class="text-white text-decoration-none">Policia De Turismo</a>
                             <img src="{{ asset('img/enlaces/police.jpg') }}" alt="Policia De Turismo" class="hover-image img-fluid" style="width: 200px; height: 150px; object-fit: cover;">
                         </li>
                     </ul>

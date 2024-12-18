@@ -96,21 +96,21 @@
       </div>
       <div class="row">
           <div class="col-lg-6">
-              <div class="gallery-item set-bg" data-setbg="{{ asset('img/priorizados/galeria1.jpg') }}">
+              <div class="gallery-item set-bg" data-setbg="{{ asset('img/about/about-a1.jpg') }}">
                   <div class="gi-text">
                       <h3>Chachapoyas</h3>
                   </div>
               </div>
               <div class="row">
                   <div class="col-sm-6">
-                      <div class="gallery-item set-bg" data-setbg="{{ asset('img/priorizados/galeria2.jpg') }}">
+                      <div class="gallery-item set-bg" data-setbg="{{ asset('img/about/about-a2.jpg') }}">
                           <div class="gi-text">
                               <h3>Chachapoyas</h3>
                           </div>
                       </div>
                   </div>
                   <div class="col-sm-6">
-                      <div class="gallery-item set-bg" data-setbg="{{ asset('img/priorizados/galeria3.jpg') }}">
+                      <div class="gallery-item set-bg" data-setbg="{{ asset('img/about/about-a3.jpg') }}">
                           <div class="gi-text">
                               <h3>Chachapoyas</h3>
                           </div>
@@ -119,7 +119,7 @@
               </div>
           </div>
           <div class="col-lg-6">
-              <div class="gallery-item large-item set-bg" data-setbg="{{ asset('img/priorizados/galeria4.jpg') }}">
+              <div class="gallery-item large-item set-bg" data-setbg="{{ asset('img/about/about-a4.jpg') }}">
                   <div class="gi-text">
                       <h3>Chachapoyas</h3>
                   </div>
