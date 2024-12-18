@@ -21,6 +21,7 @@ Route::get('/contactanos', [HomeController::class, 'contactanos'])->name('contac
 Route::get('reportes', [HomeController::class, 'reportes'])->name('reportes');
 Route::get('clientes', [HomeController::class, 'clientes'])->name('clientes');
 route::get('registrar', [HomeController::class, 'registrar'])->name('registrar');
+Route::resource('reseñas', ReseñasController::class)-> names('reseñas');
 
 
 
