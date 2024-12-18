@@ -15,11 +15,17 @@
             <div class="col-lg-6">
                 <div class="about-pic">
                     <div class="row">
-                        <div class="col-sm-6">
-                            <img src="{{ asset('resources/img/about/about-1.jpg') }}" alt="">
+                        <div class="col-sm-6 p-3">
+                            <img src="{{ asset('resources/img/about/about-1.jpg') }}" alt="" class="w-100">
                         </div>
-                        <div class="col-sm-6">
-                            <img src="{{ asset('resources/img/about/about-2.jpg') }}" alt="">
+                        <div class="col-sm-6 p-3">
+                            <img src="{{ asset('resources/img/about/about-2.jpg') }}" alt="" class="w-100">
+                        </div>
+                        <div class="col-sm-6 p-3">
+                            <img src="{{ asset('resources/img/about/about-3.jpg') }}" alt="" class="w-100">
+                        </div>
+                        <div class="col-sm-6 p-3">
+                            <img src="{{ asset('resources/img/about/about-4.jpg') }}" alt="" class="w-100">
                         </div>
                     </div>
                 </div>

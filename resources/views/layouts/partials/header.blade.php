@@ -68,7 +68,7 @@
                 <div class="col-lg-2">
                     <div class="logo">
                         <a href="/">
-                            <img src="img/about/loo.jpg" alt="Hospedaje El Mirador">
+                            <img src="{{ asset('img/logo/logo_hotel.png') }}" alt="Hospedaje El Mirador" style="height: 100px; width: auto;">
                         </a>
                     </div>
                 </div>
